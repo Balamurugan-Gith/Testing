@@ -1,0 +1,82 @@
+Run 1
+
+[2023-02-09 09:33:54,966] {loadtest.py:444} INFO - Starting load test with env=ulster_flow flow=ulster_flow input=ulster_pages profile=test
+[2023-02-09 09:33:54,968] {loadtest.py:349} INFO - Directory results\ulster_pages_20230209_09_33_54 created successfully
+[2023-02-09 09:33:54,968] {loadtest.py:480} INFO - Results output directory:results\ulster_pages_20230209_09_33_54
+[2023-02-09 09:33:54,968] {loadtest.py:334} INFO - Starting load test with env=ulster_flow flow=ulster_flow input=ulster_pages profile=test
+[2023-02-09 09:33:54,969] {loadtest.py:334} INFO - Load profile - Concurrent Flows:1, Total flow runs:1
+------------------
+[2023-02-09 09:33:56,275] {loadtest.py:103} INFO - Launched flow index 0, jobID:eae3c8af-b0ec-403d-81a8-c9da68e5d413
+[2023-02-09 10:37:53,723] {loadtest.py:268} ERROR - too many values to unpack (expected 2)
+[2023-02-09 10:37:53,731] {loadtest.py:269} ERROR - Traceback (most recent call last):
+  File "loadtest.py", line 229, in run_binary_in_loop
+    for x in result.result():
+  File "C:\ProgramData\App-V\3901FE45-815E-4428-A0BF-5CDE9CE022D3\11624357-EDA1-43DF-9A3D-383EC20248FD\Root\VFS\ProgramFilesX64\Python38\lib\concurrent\futures\_base
+.py", line 439, in result
+    return self.__get_result()
+  File "C:\ProgramData\App-V\3901FE45-815E-4428-A0BF-5CDE9CE022D3\11624357-EDA1-43DF-9A3D-383EC20248FD\Root\VFS\ProgramFilesX64\Python38\lib\concurrent\futures\_base
+.py", line 388, in __get_result
+    raise self._exception
+  File "C:\ProgramData\App-V\3901FE45-815E-4428-A0BF-5CDE9CE022D3\11624357-EDA1-43DF-9A3D-383EC20248FD\Root\VFS\ProgramFilesX64\Python38\lib\concurrent\futures\threa
+d.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "loadtest.py", line 105, in run_binary_sync
+    response, err = flow_run_utils.wait_for_flow_to_complete(args, job_id)
+ValueError: too many values to unpack (expected 2)
+
+[2023-02-09 10:37:53,731] {loadtest.py:217} INFO - Completed flow run, exiting..
+[2023-02-09 10:37:53,731] {loadtest.py:334} INFO - Total number of pages processed: 0; total time evolved:  63.98 mins;  0.00 pages/core/hour;  0.00 pages/hour
+Traceback (most recent call last):
+  File "loadtest.py", line 526, in <module>
+    metrics.generate_and_save_metrics()
+  File "C:\Users\gopalst\todelete\bitbucket\ibt\ib-load-testing-script\ibt-main\ibt\generate_metrics.py", line 20, in generate_and_save_metrics
+    self.__generate_latency_distribution(self.distribution_file)
+  File "C:\Users\gopalst\todelete\bitbucket\ibt\ib-load-testing-script\ibt-main\ibt\generate_metrics.py", line 44, in __generate_latency_distribution
+    avg_response_time = sum(response_time) / len(response_time)
+ZeroDivisionError: division by zero
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+C:\Users\gopalst\todelete\bitbucket\ibt\ib-load-testing-script\ibt-main>python loadtest.py ulster_flow ulster_flow ulster_pages test --tags LT_ulster_run6 --runtime-
+config "{\"IB_HOST\": \"instabase-test.webdev.banksvcs.net\",\"AUTH_TOKEN\": \"92Dbl3MA7RqZDnVu3zoxfBBhJRr9Nq\",\"splitter_pipeline\": \"Ulster/UBIDAC-Records-Strate
+gy/fs/Ulster-ECS/ulster-records-management/models/May_16_hv_tri_4c.joblib\",\"splitter_thresholds\": \"Ulster/UBIDAC-Records-Strategy/fs/Ulster-ECS/ulster-records-ma
+nagement/config/splitter-thresholds.json\",\"quarantine_folder\" : \"Ulster/UBIDAC-Records-Strategy/fs/Ulster-ECS/quarantine_folder\",\"heuristics_rules\":\"Ulster/U
+BIDAC-Records-Strategy/fs/Ulster-ECS/ulster-records-management/heuristics/rules.json\",\"run_quarantine_folder\" : \"no\",\"kyc_classifier\": \"Ulster/UBIDAC-Records
+-Strategy/fs/Ulster-ECS/ulster-records-management/models/kyc_classifier.joblib\",\"cdd_classifier\" :\"Ulster/UBIDAC-Records-Strategy/fs/Ulster-ECS/ulster-records-ma
+nagement/models/cdd_classifier.joblib\",\"common_dir\" : \"Ulster/UBIDAC-Records-Strategy/fs/Ulster-ECS/model_training\",\"apply_udf\" : \"\",\"DB_ROOT\" : \"Ulster/
+UBIDAC-Records-Strategy/databases/Ulster-PGDB\",\"ECMENV\" : \"2\"}"
+[2023-02-09 12:24:44,619] {loadtest.py:444} INFO - Starting load test with env=ulster_flow flow=ulster_flow input=ulster_pages profile=test
+[2023-02-09 12:24:44,621] {loadtest.py:349} INFO - Directory results\ulster_pages_20230209_12_24_44 created successfully
+[2023-02-09 12:24:44,622] {loadtest.py:480} INFO - Results output directory:results\ulster_pages_20230209_12_24_44
+[2023-02-09 12:24:44,622] {loadtest.py:334} INFO - Starting load test with env=ulster_flow flow=ulster_flow input=ulster_pages profile=test
+[2023-02-09 12:24:44,623] {loadtest.py:334} INFO - Load profile - Concurrent Flows:1, Total flow runs:1
+------------------
+[2023-02-09 12:24:46,000] {loadtest.py:103} INFO - Launched flow index 0, jobID:73ccc6a4-79a6-418b-91b1-2967cdccacad
+[2023-02-09 13:28:51,484] {loadtest.py:268} ERROR - too many values to unpack (expected 2)
+[2023-02-09 13:28:51,492] {loadtest.py:269} ERROR - Traceback (most recent call last):
+  File "loadtest.py", line 235, in run_binary_in_loop
+    print(result.result())
+  File "C:\ProgramData\App-V\3901FE45-815E-4428-A0BF-5CDE9CE022D3\11624357-EDA1-43DF-9A3D-383EC20248FD\Root\VFS\ProgramFilesX64\Python38\lib\concurrent\futures\_base
+.py", line 439, in result
+    return self.__get_result()
+  File "C:\ProgramData\App-V\3901FE45-815E-4428-A0BF-5CDE9CE022D3\11624357-EDA1-43DF-9A3D-383EC20248FD\Root\VFS\ProgramFilesX64\Python38\lib\concurrent\futures\_base
+.py", line 388, in __get_result
+    raise self._exception
+  File "C:\ProgramData\App-V\3901FE45-815E-4428-A0BF-5CDE9CE022D3\11624357-EDA1-43DF-9A3D-383EC20248FD\Root\VFS\ProgramFilesX64\Python38\lib\concurrent\futures\threa
+d.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "loadtest.py", line 105, in run_binary_sync
+    response, err = flow_run_utils.wait_for_flow_to_complete(args, job_id)
+ValueError: too many values to unpack (expected 2)
+
+[2023-02-09 13:28:51,494] {loadtest.py:217} INFO - Completed flow run, exiting..
+[2023-02-09 13:28:51,494] {loadtest.py:334} INFO - Total number of pages processed: 0; total time evolved:  64.11 mins;  0.00 pages/core/hour;  0.00 pages/hour
+Traceback (most recent call last):
+  File "loadtest.py", line 526, in <module>
+    metrics.generate_and_save_metrics()
+  File "C:\Users\gopalst\todelete\bitbucket\ibt\ib-load-testing-script\ibt-main\ibt\generate_metrics.py", line 20, in generate_and_save_metrics
+    self.__generate_latency_distribution(self.distribution_file)
+  File "C:\Users\gopalst\todelete\bitbucket\ibt\ib-load-testing-script\ibt-main\ibt\generate_metrics.py", line 44, in __generate_latency_distribution
+    avg_response_time = sum(response_time) / len(response_time)
